@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+<!-- templates/home.html-->
+
+{% block title %}Home{% endblock title %} {% block content %} {% if
+user.is_authenticated %} Hi {{ user.username }}!
+<p><a href="{% url 'logout' %}">Log Out</a></p>
+{% else %}
+<p>You are not logged in</p>
+<a href="{% url 'login' %}">Log In</a>
+{% endif %}
+
+<main class="my-0 mx-auto max-w-3xl text-center">
+  <h2 class="p-6 text-4xl">...</h2>
+
+  <p class="px-10 pb-10 text-left">howdy</p>
+
+  <button class="bg-sky-600 hover:bg-sky-700 px-5 py-3 text-white rounded-lg">
+    button
+  </button>
+</main>
+{% endblock content %}
