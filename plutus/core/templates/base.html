@@ -2,15 +2,17 @@
 <!DOCTYPE html>
 <html>
     {% load tailwind_tags %}
-<head>
-  <meta charset="utf-8">
-  <title>{% block title %}Plutus{% endblock %}</title>
-    {% tailwind_css %}
-
-</head>
-<body>
-    {% block content %}
-    
-    {% endblock %}
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            {% block title %}Plutus{% endblock %}
+        </title>
+        {% tailwind_css %}
+    </head>
+    <body>
+        {% include 'nav.html' %}
+        {% block content %}
+            
+        {% endblock %}
+    </body>
 </html>
